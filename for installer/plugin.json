@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "sculptshelf",
+  "name": "SculptShelf",
+  "description": "A fast brush, alpha and material browser for ZBrush: all your external folders in one searchable thumbnail grid, loaded with a double-click.",
+  "overview": "SculptShelf gathers the brushes (.ZBP), alphas (PSD, PNG, JPG, BMP, TIF) and materials (.ZMT) from as many folders as you like into one dark, searchable thumbnail grid with the real embedded icons. Double-click to load straight into ZBrush; brushes always reload fresh from disk, and SculptShelf minimizes so you can keep sculpting. Favourites with drag reordering, keyboard navigation, automatic folder watching and persistent settings are built in.",
+  "version": "1.3.0",
+  "assets": {
+    "banner": "SculptShelf_banner.png",
+    "icon": "SculptShelf.png"
+  },
+  "content": {
+    "readme": "README.md",
+    "features": "FEATURES.md"
+  },
+  "sourceDirectory": "files",
+  "targets": [
+    {
+      "app": "zbrush",
+      "os": "windows",
+      "supportedVersions": ["2027", "2027.1", "2027.2"],
+      "install": [
+        { "action": "copy", "source": "SculptShelf.py", "destination": "${paths.zplugins}/SculptShelf.py" },
+        { "action": "mkdir", "destination": "${paths.zplugins}/SculptShelfData" },
+        { "action": "copy", "source": "SculptShelfData", "destination": "${paths.zplugins}/SculptShelfData" }
+      ]
+    }
+  ]
+}
